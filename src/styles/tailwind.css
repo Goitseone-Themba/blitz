@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@theme {
+    --color-blitzBlue: #1E90FF;
+    --color-blitzBlack: #000000;
+    --color-blitzWhite: #FFFFFF;
+}
+
 .animate-fade-in {
     animation: fadeIn 1s ease-in;
 }
