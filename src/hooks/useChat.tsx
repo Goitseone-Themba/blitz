@@ -71,7 +71,7 @@ export const useChat = () => {
     const deleteBookmark = (bookmarkId: string) => {
         setBookmarks((prev) => {
             const updated = prev.filter((bmk) => bmk.bookmarkId !== bookmarkId);
-            localStorage.setitem('bookmarks', JSON.stringify(updated));
+            localStorage.setItem('bookmarks', JSON.stringify(updated));
             return updated;
         });
     };
