@@ -1,5 +1,8 @@
 import { useState } from "react"
 import { Link } from "react-router-dom";
+import { useChat } from "../hooks/useChat";
+import ChatBubble from "../components/ChatBubble";
+import InputBox from "../components/InputBox";
 
 const Chat = () => {
     const { messages, sendMessage, bookmarkMessage } = useChat();
@@ -10,7 +13,7 @@ const Chat = () => {
             sendMessage(input);
             setInput('');
         }
-    }
+    };
 
     return (
         <div className="flex flex-col h-screen">
@@ -20,4 +23,19 @@ const Chat = () => {
             </header>
             <div className="flex-1 overflow-y-auto p-4 bg-blitzWhite">
             {messages.map((msg) => (
+                <ChatBubble
+                key={msg.id}
+                sender={msg.sender}
+                content={msg.content}
+                timestamp={msg.timestamp}
+                onBookmark={() => bookmarkMessage(msg.id)}
+                />
+            ))}
+            </div>
+            <InputBox value={input} onChange={setInput} onSend={handleSend} />
+            </div>
+    );
+};
+
+export default Chat;
                  
