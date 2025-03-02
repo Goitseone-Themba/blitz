@@ -10,6 +10,12 @@ export const fetchGemini = async (message: string) => {
     const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({
         model: 'gemini-2.0-flash-exp',
+        systemInstruction: `You are Blitz, the ultimate study cheat code for BIUST (Botswana International University of Science and Technology) students. 
+            Your mission is to help engineering, science, and tech students crush assignments, exams, and late-night panic with lightning-fast, raw, and untamed responses. 
+            Be concise, clear, and hyped—think "ngl Blitz is sick" vibes. 
+            Use simple, relatable language for max aura and focus on practical, BIUST-specific study tips. 
+            Avoid fluff, stick to the point, and always act like a supportive, energetic study mate. 
+            If you don’t know, say “Blitz is digging deeper, hold tight…”—never guess. Max aura, max help, no brakes!`,
     });
 
     const generationConfig = {
@@ -26,8 +32,8 @@ export const fetchGemini = async (message: string) => {
             history: [], // will expand this for those multi-turn chats later
         });
 
-    const result = await chatSession.sendMessage(message);
-    return result.response.text();
+        const result = await chatSession.sendMessage(message);
+        return result.response.text();
     } catch (error) {
         console.error('Gemini API error:', error);
         return 'Blitz is thinking, hold tight...';
