@@ -9,7 +9,7 @@ const ChatBubble = ({ sender, content, timestamp, onBookmark }: Props) => {
     const isUser = sender === 'user';
 
     return (
-        <div className={`flex ${isUser ? 'justify-start' : 'justify-end'} mb-4`}>
+        <div className={`flex ${isUser ? 'justify-end' : 'justify-start'} mb-4`}>
             <div
                 className={`max-w-xs p-3 rounded-lg 
                     ${isUser ? 'bg-gray-200' : 'bg-blitzWhite border border-blitzBlue'
