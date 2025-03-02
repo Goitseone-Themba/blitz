@@ -38,7 +38,7 @@ export const useChat = () => {
         const blitzMsg: Message = {
             id: `msg_${Date.now() + 1}`,
             sender: 'blitz',
-            content: `Blitz says: ${content} (real Gemini soon...)`,
+            content: `Blitz says: ${content} (real Model Response soon...)`,
             timestamp: new Date().toISOString().slice(11, 16),
         };
         setMessages((prev) => [...prev, blitzMsg]);
