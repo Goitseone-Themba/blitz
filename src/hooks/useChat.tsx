@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { fetchGemini } from "../utils/api";
 
 interface Message {
     id: string;
@@ -35,17 +36,34 @@ export const useChat = () => {
         setMessages((prev) => [...prev, userMsg]);
 
         // Stubbed Gemini response
-        const blitzMsg: Message = {
-            id: `msg_${Date.now() + 1}`,
-            sender: 'blitz',
-            content: `Blitz says: ${content} (real Model Response soon...)`,
-            timestamp: new Date().toISOString().slice(11, 16),
-        };
-        setMessages((prev) => [...prev, blitzMsg]);
+        //const blitzMsg: Message = {
+        //   id: `msg_${Date.now() + 1}`,
+        //  sender: 'blitz',
+        //  content: `Blitz says: ${content} (real Model Response soon...)`,
+        //  timestamp: new Date().toISOString().slice(11, 16),
+        // };
+        // setMessages((prev) => [...prev, blitzMsg]);
 
         // real Gemini
-        // const response = await fetchGemini(content);
-        // setMessages((prev) => [...prev, { ...blitzMsg, content: response }]);
+        try {
+            const response = await fetchGemini(content);
+            const blitzMsg: Message = {
+                id: `msg_${Date.now() + 1}`,
+                sender: 'blitz',
+                content: response,
+                timestamp: new Date().toISOString().slice(11, 16),
+            };
+            setMessages((prev) => [...prev, blitzMsg]);
+        } catch (error) {
+            console.error('Error sending message:', error);
+            const errorMsg: Message = {
+                id: `msg_${Date.now() + 1}`,
+                sender: 'blitz',
+                content: 'Blitz is thinking, hold tight...',
+                timestamp: new Date().toISOString().slice(11, 16),
+            };
+            setMessages((prev) => [...prev, errorMsg]);
+        }
     };
 
     const bookmarkMessage = (messageId: string) => {
