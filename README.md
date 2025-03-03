@@ -20,6 +20,7 @@ screen.
 - Raw Power: Uses untamed, fast answers—no fluff, max help.
 
 ## Usage
+https://blitz-ai.netlify.app/
 - Chat: Type a study question in the input, hit Send—Blitz responds instatly.
 - Save: click the * next to Blitz's answers to bookmark them.
 - Saved Screen: Navigate to the Saved page to review or delete bookmarks.
