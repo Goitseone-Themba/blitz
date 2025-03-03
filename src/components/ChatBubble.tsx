@@ -1,3 +1,5 @@
+import ReactMarkdown from 'react-markdown';
+
 interface Props {
     sender: 'user' | 'blitz';
     content: string;
@@ -15,7 +17,7 @@ const ChatBubble = ({ sender, content, timestamp, onBookmark }: Props) => {
                     ${isUser ? 'bg-gray-200' : 'bg-blitzWhite border border-blitzBlue'
                     }`}
             >
-                <p>{content}</p>
+                <ReactMarkdown>{content}</ReactMarkdown>
                 <span className="text-xs text-blitzBlack">{timestamp}</span>
                 {!isUser && onBookmark && (
                     <button onClick={onBookmark} className="ml-2 text-blitzBlue">
