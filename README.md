@@ -1,54 +1,31 @@
-# React + TypeScript + Vite
+# Blitz - Your Ultimate Study Cheat Code
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+Blitz is the ultimate AI study mate for BIUST students. 
+Built as a lightning-fast, raw, and untamed chat app, Blitz helps engineering, 
+science, and tech students crush assignments, exams, and late-night panic with 
+“ngl Blitz is sick” vibes. It’s free, experimental, 
+and packed with max aura—perfect for the BIUST grind.
 
-Currently, two official plugins are available:
+This is the MVP (Minimum Viable Product) version—plain and sexy, with no styles 
+to focus on functionality. We're building it live, so jump in, test it, and help 
+shape it into your secret weapon!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- Chat with Blitz: Ask anything study-related (e.g., "Summarize Newton's Laws" or 
+"Help with OOP") and get concise, hyped responses.
+- Save Clutch Answers: Bookmark Blitz's responses for quick revisits in the "Saved" 
+screen.
+- Mobile-First: Works on any device, optimized for BIUST's on-the-go students.
+- Raw Power: Uses untamed, fast answers—no fluff, max help.
 
-## Expanding the ESLint configuration
+## Usage
+https://blitz-ai.netlify.app/
+- Chat: Type a study question in the input, hit Send—Blitz responds instatly.
+- Save: click the * next to Blitz's answers to bookmark them.
+- Saved Screen: Navigate to the Saved page to review or delete bookmarks.
+- Feedback: Drop feedback in the Discussions tab or raise issues here—help us mold 
+Blitz into something useful for you!
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Easter Egg
+Open dev tools (F12) after page load

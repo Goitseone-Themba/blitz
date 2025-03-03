@@ -14,6 +14,7 @@
     "@types/react-router-dom": "^5.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-markdown": "^10.0.1",
     "react-router-dom": "^7.2.0"
   },
   "devDependencies": {
