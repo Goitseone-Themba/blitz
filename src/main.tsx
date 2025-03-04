@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-//import './styles/tailwind.css'
+import './styles/tailwind.css'
 import App from './App.tsx'
 
 // ASCII art for Blitz
