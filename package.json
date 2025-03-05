@@ -1,0 +1,12 @@
+{
+    "name": "blitz",
+    "version": "1.0.0",
+    "workspaces": ["client", "server"],
+    "scripts": {
+        "dev:client": "cd client && npm run dev",
+        "dev:server": "cd server && npm run dev",
+        "dev": "npm run dev:client & npm run dev:server",
+        "build:client": "cd client && npm run build",
+        "start:server": "cd server && npm start"
+    }
+}
