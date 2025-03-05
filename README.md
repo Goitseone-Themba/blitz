@@ -22,14 +22,14 @@ This is the MVP (Minimum Viable Product), now scaling in a monorepo with a React
 ## Usage
 - [Live Demo](https://blitz-ai.netlify.app/) (client, plain version for testing).
 - **Run Locally**:
-  1. Clone this repo: `git clone https://github.com/your-username/blitz.git`
+  1. Clone this repo: `git clone https://github.com/Goitseone-Themba/blitz.git`
   2. Install: `cd blitz && npm install`
   3. Set `.env` files in `client/` and `server/` with API keys/MongoDB URI.
   4. Start: `npm run dev` (runs both client and server).
 - **Chat**: Type in the textarea, hit Send—Blitz responds instantly.
 - **Save**: Click ★ to bookmark answers.
 - **Saved Screen**: Navigate to `/saved` to review/delete.
-- **Feedback**: Drop feedback in [Discussions](your-repo-link/discussions) or BIUST WhatsApp—help us mold Blitz!
+- **Feedback**: Drop feedback in [Discussions](https://github.com/Goitseone-Themba/blitz.git/discussions) or BIUST WhatsApp—help us mold Blitz!
 
 ## Tech Stack
 - **Frontend**: Vite + React TypeScript + SWC
