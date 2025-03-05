@@ -29,7 +29,7 @@ This is the MVP (Minimum Viable Product), now scaling in a monorepo with a React
 - **Chat**: Type in the textarea, hit Send—Blitz responds instantly.
 - **Save**: Click ★ to bookmark answers.
 - **Saved Screen**: Navigate to `/saved` to review/delete.
-- **Feedback**: Drop feedback in [Discussions](https://github.com/Goitseone-Themba/blitz.git/discussions) or BIUST WhatsApp—help us mold Blitz!
+- **Feedback**: Drop feedback in [Discussions](https://github.com/Goitseone-Themba/blitz/discussions) or BIUST WhatsApp—help us mold Blitz!
 
 ## Tech Stack
 - **Frontend**: Vite + React TypeScript + SWC
