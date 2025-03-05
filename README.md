@@ -1,7 +1,11 @@
 # Blitz - Your Ultimate Study Cheat Code
 
 ## Overview
-Blitz is the ultimate AI study mate for BIUST (Botswana International University of Science and Technology) students. Built as a lightning-fast, raw, and untamed chat app, Blitz helps engineering, science, and tech students crush assignments, exams, and late-night panic with “ngl Blitz is sick” vibes. Powered by Google’s `gemini-2.0-flash-exp`, it’s free, experimental, and packed with max aura—perfect for the BIUST grind.
+Blitz is the ultimate AI study mate for BIUST students. 
+Built as a lightning-fast, raw, and untamed chat app, Blitz helps engineering, 
+science, and tech students crush assignments, exams, and late-night panic with 
+“ngl Blitz is sick” vibes. It’s free, experimental, 
+and packed with max aura—perfect for the BIUST grind.
 
 This is the MVP (Minimum Viable Product), now scaling in a monorepo with a React frontend (`client/`) and Express backend (`server/`). We’re building it live—test it, break it, and help shape it into your secret weapon!
 
@@ -13,7 +17,7 @@ This is the MVP (Minimum Viable Product), now scaling in a monorepo with a React
 - **Chat with Blitz**: Ask study questions, get Markdown-formatted, hyped responses.
 - **Save Clutch Answers**: Bookmark responses in the “Saved” screen.
 - **Mobile-First**: Works on any device, optimized for BIUST students.
-- **Raw Power**: Uses untamed `gemini-2.0-flash-exp` with rate limit fallbacks.
+- **Raw Power**: Uses untamed, fast answers—no fluff, max help.
 
 ## Usage
 - [Live Demo](https://blitz-ai.netlify.app/) (client, plain version for testing).
