@@ -15,37 +15,49 @@ const Notes = () => {
             body: JSON.stringify({ title, content: notes }),
         });
         const data = await response.json();
-        setSavedNotes([...savedNotes, { id: data.id, title, content: notes}]);
+        setSavedNotes([...savedNotes, { id: data.id, title, content: notes }]);
         setNotes('');
         setTitle('');
     };
 
     return (
         <div className="flex flex-col h-screen">
-        <header className="bg-blitzBlack text-blitzBlue p-4 flex 
+            <header className="bg-blitzBlack text-blitzBlue p-4 flex 
         justify-between items-center">
-        <h1 className="text-2xl font-bold">Notes</h1>
-        <Link to="/" className="text-blitzBlue">Chat</Link>
-        </header>
-        <div className="flex-1 p-4 bg-blitzWhite">
-        <input
-        type="text"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-        placeholder="Note Title"
-        className="w-full p-2 mb-2 border-blitzBlue rounded text-blitzBlack"
-        />
-        <ReactQuill
-        theme="snow"
-        value={notes}
-        onChange={setNotes}
-        className="h-64 mb-4"
-        />
-        <button
-        onClick={handleSave}
-        className="bg-blitzBlue text-blitzWhite p-2 rounded"
-        >
-        Save Note
-        </button>
-        <div className="mt-4">
+                <h1 className="text-2xl font-bold">Notes</h1>
+                <Link to="/" className="text-blitzBlue">Chat</Link>
+            </header>
+            <div className="flex-1 p-4 bg-blitzWhite">
+                <input
+                    type="text"
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
+                    placeholder="Note Title"
+                    className="w-full p-2 mb-2 border-blitzBlue rounded text-blitzBlack"
+                />
+                <ReactQuill
+                    theme="snow"
+                    value={notes}
+                    onChange={setNotes}
+                    className="h-64 mb-4"
+                />
+                <button
+                    onClick={handleSave}
+                    className="bg-blitzBlue text-blitzWhite p-2 rounded"
+                >
+                    Save Note
+                </button>
+                <div className="mt-4">
+                    {savedNotes.map((note) => (
+                        <div key={note.id} className="p-2 border-b broder-blitzBlue">
+                            <h3 className="font-bold">{note.title}</h3>
+                            <div dangerouslySetInnerHTML={{ __html: note.content }} />
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
+};
 
+export default Notes;
