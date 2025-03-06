@@ -1,6 +1,14 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 export const fetchGemini = async (message: string) => {
+    const response = await fetch('http://localhost:3001/api/chat', {
+        method: 'POST',
+        header: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message }),
+    });
+        const data 
+/*
+export const fetchGemini = async (message: string) => {
     //return `Blitz responst to: ${message}`;
 
     const apiKeys = [
@@ -50,3 +58,4 @@ export const fetchGemini = async (message: string) => {
 }
 return 'Blitz is thinking, hold tight...';
 };
+*/

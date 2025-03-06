@@ -56,3 +56,19 @@ export const handleChat = async (req: Request, res: Response) => {
     }
     res.status(429).json({ error: 'Blitz is hitting rate limits, hold tight...' });
 };
+
+export const getChat = () => {
+    console.log("hit getChat");
+}
+
+export const createBookmark = () => {
+    console.log("hit createBookmark");
+}
+
+export const getBookmarks = () => {
+    console.log("hit getBookmarks");
+}
+
+export const deleteBookmark = () => {
+    console.log("hit deleteBookmark");
+}
