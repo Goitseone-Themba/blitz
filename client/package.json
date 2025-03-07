@@ -16,7 +16,8 @@
     "react-dom": "18",
     "react-markdown": "^10.0.1",
     "react-quill": "^2.0.0",
-    "react-router-dom": "^7.2.0"
+    "react-router-dom": "^7.2.0",
+    "react-timer-hook": "^4.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
