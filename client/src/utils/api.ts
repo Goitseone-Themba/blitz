@@ -1,5 +1,17 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
+//import { GoogleGenerativeAI } from "@google/generative-ai";
 
+export const fetchGemini = async (message: string) => {
+    const response = await fetch('http://localhost:3001/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message }),
+    });
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.error || 'Blitz hit a snag');
+    return data.response;
+};
+
+/*
 export const fetchGemini = async (message: string) => {
     //return `Blitz responst to: ${message}`;
 
@@ -50,3 +62,4 @@ export const fetchGemini = async (message: string) => {
 }
 return 'Blitz is thinking, hold tight...';
 };
+*/
