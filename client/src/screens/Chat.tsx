@@ -22,6 +22,7 @@ const Chat = () => {
                 <div className="flex space-x-4">
                     <Link to="/saved" className="text-blitzWhite">Saved</Link>
                     <Link to="/notes" className="text-blitzWhite">Notes</Link>
+                    <Link to="/pomodoro" className="text-blitzWhite">Pomodoro</Link>
                 </div>
             </header>
             <div className="flex-1 overflow-y-auto p-4 bg-blitzWhite">
