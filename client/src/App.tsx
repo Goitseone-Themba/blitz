@@ -4,6 +4,7 @@ import Splash from './screens/Splash';
 import Saved from './screens/Saved';
 import Chat from './screens/Chat';
 import Notes from './screens/Notes';
+import Pomodoro from './screens/Pomodoro';
 
 function App() {
     const [showSplash, setShowsplash] = useState(true);
@@ -24,6 +25,7 @@ function App() {
                             <Route path="/" element={<Chat />} />
                             <Route path="/saved" element={<Saved />} />
                             <Route path="/notes" element={<Notes/>} />
+                            <Route path="/pomodoro" element={<Pomodoro/>} />
                         </>
                     )}
                 </Routes>
