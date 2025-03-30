@@ -23,6 +23,7 @@ function App() {
                     ) : (
                         <>
                             <Route path="/" element={<Chat />} />
+                            <Route path="/chat" element={<Chat />} />
                             <Route path="/saved" element={<Saved />} />
                             <Route path="/notes" element={<Notes/>} />
                             <Route path="/pomodoro" element={<Pomodoro/>} />
